@@ -1,0 +1,42 @@
+
+public class TripleSum0 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = new int[8];
+		
+		arr[0] = 30;
+		arr[1] = -40;
+		arr[2] = -20;
+		arr[3] = -10;
+		arr[4] = 40;
+		arr[5] = 0;
+		arr[6] = 10;
+		arr[7] = 5;
+		
+		
+		int count = 0;
+		for (int i = 0; i < arr.length; i++)
+		{
+			for (int j = i+1; j < arr.length; j++)
+			{
+				for ( int k = j + 1; k < arr.length; k++)
+				{
+					int sum = arr[i] + arr[j] + arr[k];
+					
+					if ( sum == 0)
+					{
+						System.out.println(arr[i] + " " +  arr[j] + " " + arr[k]);
+						count++;
+					}
+				}
+			
+			}
+		}
+		
+		System.out.print(count);
+
+	}
+
+}
